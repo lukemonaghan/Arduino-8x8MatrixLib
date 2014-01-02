@@ -1,11 +1,12 @@
 ============
-8x8MatrixLib - Arduino Scrolling 8x8 LED matrix example with library
+8x8MatrixLib
+Luke Monaghan
+03/01/14
+Arduino Scrolling 8x8 LED matrix example with library
 ============
 
 ============
 letters.h
-Luke Monaghan - 03/01/14
-www.github.com/lukemonaghan
 ============
 Sketch size = 3220
 Estimated ram use = 496
@@ -24,8 +25,6 @@ I am not responsible for any damage to any of your parts, code, wires, or animal
 
 ============
 TextMatrix.ino
-Luke Monaghan - 03/01/14
-www.github.com/lukemonaghan
 ============
 Sketch size = 10340 (with Letters.h)
 Estimated ram use = 1350 (with Letters.h)
