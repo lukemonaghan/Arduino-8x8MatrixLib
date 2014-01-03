@@ -11,8 +11,8 @@ Arduino Scrolling 8x8 LED matrix example with library
 ============
 letters.h
 ============
-Sketch size = 3220
-Estimated ram use = 496
+Estimated Sketch size = 4252
+Estimated ram use = 504
 
 8x8 matrix letters binary library.
 I have tried to make this as minimal as possible to preserve as much memory for arduino devices as possible.
@@ -29,8 +29,8 @@ I am not responsible for any damage to any of your parts, code, wires, or animal
 ============
 TextMatrix.ino
 ============
-Sketch size = 10340 (with Letters.h)
-Estimated ram use = 1350 (with Letters.h)
+Sketch size = 10624 (with Letters.h)
+Estimated ram use = 1287 (with Letters.h)
 
 8x8 matrix letters binary sample code.
 Display scrolling text using my Letter.h library, code is commented for educational use.

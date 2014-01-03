@@ -4,8 +4,8 @@ letters.h
 Luke Monaghan - 03/01/14
 www.github.com/lukemonaghan
 
-Sketch size = 3220
-Estimated ram use = 496
+Estimated Sketch size = 4252
+Estimated ram use = 504
 
 8x8 matrix letters binary library.
 I have tried to make this as minimal as possible to preserve as much memory for arduino devices as possible.
@@ -20,104 +20,104 @@ I am not responsible for any damage to any of your parts, code, wires, or animal
 
 */
 
-//@INFO Letter struct, used to define Letter Bitwise chars
+//@INFO Matrix8x8 struct, used to define Matrix8x8 Bitwise chars
 
-struct Letter { char b0,b1,b2,b3,b4,b5,b6,b7; };
+struct Matrix8x8 { char b0,b1,b2,b3,b4,b5,b6,b7; };
 
 //@INFO Letters
 
-Letter char_Space = {0,0,0,0,0,0,0,0};
+Matrix8x8 char_Space = {0,0,0,0,0,0,0,0};
 
-Letter char_A = {24,24,36,60,66,66,-127,-127};
-Letter char_a = {0,0,60,66,66,66,66,63};
+Matrix8x8 char_A = {24,24,36,60,66,66,-127,-127};
+Matrix8x8 char_a = {0,0,60,66,66,66,66,63};
 
-Letter char_B = {124,66,66,66,124,66,66,124};
-Letter char_b = {64,64,64,124,66,66,66,124};
+Matrix8x8 char_B = {124,66,66,66,124,66,66,124};
+Matrix8x8 char_b = {64,64,64,124,66,66,66,124};
 
-Letter char_C = {30,32,32,32,32,32,32,30};
-Letter char_c = {0,0,0,56,64,64,64,56};
+Matrix8x8 char_C = {30,32,32,32,32,32,32,30};
+Matrix8x8 char_c = {0,0,0,56,64,64,64,56};
 
-Letter char_D = {124,66,66,66,66,66,66,124};
-Letter char_d = {2,2,2,62,66,66,66,62};
+Matrix8x8 char_D = {124,66,66,66,66,66,66,124};
+Matrix8x8 char_d = {2,2,2,62,66,66,66,62};
 
-Letter char_E = {-2,-128,-128,-16,-16,-128,-128,-2};
-Letter char_e = {0,24,36,66,126,64,32,24};
+Matrix8x8 char_E = {-2,-128,-128,-16,-16,-128,-128,-2};
+Matrix8x8 char_e = {0,24,36,66,126,64,32,24};
 
-Letter char_F = {126,64,64,64,120,64,64,64};
-Letter char_f = {0,28,32,32,56,32,32,32};
+Matrix8x8 char_F = {126,64,64,64,120,64,64,64};
+Matrix8x8 char_f = {0,28,32,32,56,32,32,32};
 
-Letter char_G = {62,64,64,64,78,66,66,62};
-Letter char_g = {0,28,36,36,28,4,4,56};
+Matrix8x8 char_G = {62,64,64,64,78,66,66,62};
+Matrix8x8 char_g = {0,28,36,36,28,4,4,56};
 
-Letter char_H = {66,66,66,126,126,66,66,66};
-Letter char_h = {32,32,32,56,36,36,36,36};
+Matrix8x8 char_H = {66,66,66,126,126,66,66,66};
+Matrix8x8 char_h = {32,32,32,56,36,36,36,36};
 
-Letter char_I = {126,24,24,24,24,24,24,126};
-Letter char_i = {8,28,8,0,8,8,8,8};
+Matrix8x8 char_I = {126,24,24,24,24,24,24,126};
+Matrix8x8 char_i = {8,28,8,0,8,8,8,8};
 
-Letter char_J = {126,4,4,4,4,4,8,48};
-Letter char_j = {8,0,8,8,8,8,8,48};
+Matrix8x8 char_J = {126,4,4,4,4,4,8,48};
+Matrix8x8 char_j = {8,0,8,8,8,8,8,48};
 
-Letter char_K = {68,72,80,96,96,80,72,68};
-Letter char_k = {64,64,72,80,96,96,80,72};
+Matrix8x8 char_K = {68,72,80,96,96,80,72,68};
+Matrix8x8 char_k = {64,64,72,80,96,96,80,72};
 
-Letter char_L = {64,64,64,64,64,64,64,126};
-Letter char_l = {24,8,8,8,8,8,8,60};
+Matrix8x8 char_L = {64,64,64,64,64,64,64,126};
+Matrix8x8 char_l = {24,8,8,8,8,8,8,60};
 
-Letter char_M = {-127,-61,-91,-103,-127,-127,-127,-127};
-Letter char_m = {0,0,0,-92,-38,-127,-127,-127};
+Matrix8x8 char_M = {-127,-61,-91,-103,-127,-127,-127,-127};
+Matrix8x8 char_m = {0,0,0,-92,-38,-127,-127,-127};
 
-Letter char_N = {-127,-63,-95,-111,-119,-123,-125,-127};
-Letter char_n = {0,0,0,88,100,66,66,66};
+Matrix8x8 char_N = {-127,-63,-95,-111,-119,-123,-125,-127};
+Matrix8x8 char_n = {0,0,0,88,100,66,66,66};
 
-Letter char_O = {60,66,-127,-127,-127,-127,66,60};
-Letter char_o = {0,0,60,66,66,66,66,60};
+Matrix8x8 char_O = {60,66,-127,-127,-127,-127,66,60};
+Matrix8x8 char_o = {0,0,60,66,66,66,66,60};
 
-Letter char_P = {124,66,66,66,124,64,64,64};
-Letter char_p = {24,36,36,56,32,32,32,32};
+Matrix8x8 char_P = {124,66,66,66,124,64,64,64};
+Matrix8x8 char_p = {24,36,36,56,32,32,32,32};
 
-Letter char_Q = {60,66,-127,-127,-127,-127,66,61};
-Letter char_q = {24,36,36,28,4,4,4,2};
+Matrix8x8 char_Q = {60,66,-127,-127,-127,-127,66,61};
+Matrix8x8 char_q = {24,36,36,28,4,4,4,2};
 
-Letter char_R = {120,68,68,68,120,68,68,68};
-Letter char_r = {0,0,0,28,34,32,32,32};
+Matrix8x8 char_R = {120,68,68,68,120,68,68,68};
+Matrix8x8 char_r = {0,0,0,28,34,32,32,32};
 
-Letter char_S = {62,64,64,64,62,2,2,124};
-Letter char_s = {0,60,64,64,60,2,2,60};
+Matrix8x8 char_S = {62,64,64,64,62,2,2,124};
+Matrix8x8 char_s = {0,60,64,64,60,2,2,60};
 
-Letter char_T = {-2,16,16,16,16,16,16,16};
-Letter char_t = {16,124,16,16,16,16,16,8};
+Matrix8x8 char_T = {-2,16,16,16,16,16,16,16};
+Matrix8x8 char_t = {16,124,16,16,16,16,16,8};
 
-Letter char_U = {66,66,66,66,66,66,66,60};
-Letter char_u = {0,0,0,66,66,66,38,26};
+Matrix8x8 char_U = {66,66,66,66,66,66,66,60};
+Matrix8x8 char_u = {0,0,0,66,66,66,38,26};
 
-Letter char_V = {0,-127,-127,-127,66,66,36,24};
-Letter char_v = {0,0,0,0,68,68,40,16};
+Matrix8x8 char_V = {0,-127,-127,-127,66,66,36,24};
+Matrix8x8 char_v = {0,0,0,0,68,68,40,16};
 
-Letter char_W = {-127,-127,-127,-127,-103,-103,90,36};
-Letter char_w = {0,0,0,0,-127,-127,90,36};
+Matrix8x8 char_W = {-127,-127,-127,-127,-103,-103,90,36};
+Matrix8x8 char_w = {0,0,0,0,-127,-127,90,36};
 
-Letter char_X = {-127,66,36,24,24,36,66,-127};
-Letter char_x = {0,0,0,66,36,24,36,66};
+Matrix8x8 char_X = {-127,66,36,24,24,36,66,-127};
+Matrix8x8 char_x = {0,0,0,66,36,24,36,66};
 
-Letter char_Y = {66,66,36,36,24,24,24,24};
-Letter char_y = {34,34,20,8,8,16,16,32};
+Matrix8x8 char_Y = {66,66,36,36,24,24,24,24};
+Matrix8x8 char_y = {34,34,20,8,8,16,16,32};
 
-Letter char_Z = {-1,2,4,8,16,32,64,-1};
-Letter char_z = {0,0,-1,2,12,48,32,-1};
+Matrix8x8 char_Z = {-1,2,4,8,16,32,64,-1};
+Matrix8x8 char_z = {0,0,-1,2,12,48,32,-1};
 
 //@INFO Numbers
 
-Letter char_0 = {60,66,66,66,66,66,66,60};
-Letter char_1 = {8,24,40,8,8,8,8,60};
-Letter char_2 = {60,2,2,2,4,8,16,62};
-Letter char_3 = {60,2,2,30,30,2,2,60};
-Letter char_4 = {4,12,20,20,126,4,4,4};
-Letter char_5 = {126,64,64,64,124,2,2,124};
-Letter char_6 = {28,32,64,64,124,66,66,60};
-Letter char_7 = {126,2,2,4,4,8,8,16};
-Letter char_8 = {126,66,66,60,60,66,66,126};
-Letter char_9 = {60,66,66,66,126,2,2,124};
+Matrix8x8 char_0 = {60,66,66,66,66,66,66,60};
+Matrix8x8 char_1 = {8,24,40,8,8,8,8,60};
+Matrix8x8 char_2 = {60,2,2,2,4,8,16,62};
+Matrix8x8 char_3 = {60,2,2,30,30,2,2,60};
+Matrix8x8 char_4 = {4,12,20,20,126,4,4,4};
+Matrix8x8 char_5 = {126,64,64,64,124,2,2,124};
+Matrix8x8 char_6 = {28,32,64,64,124,66,66,60};
+Matrix8x8 char_7 = {126,2,2,4,4,8,8,16};
+Matrix8x8 char_8 = {126,66,66,60,60,66,66,126};
+Matrix8x8 char_9 = {60,66,66,66,126,2,2,124};
 
 //@INFO Functions
 
@@ -135,20 +135,21 @@ char GetBinary(char iY){ //simpley returns a value that checks bit alignments
 		default:	return 0;	//Right Most
 	}
 }
+
 //Checks if a pixel is at a given index, uses ternary opperators
-char IsPixel(Letter lLet, char iX, char iY){
+char IsPixel(Matrix8x8 lLet, char iX, char iY){
 	switch(iX){
-		case 0:		return (lLet.b0 & GetBinary(iY)) ? 1 : 0;;
-		case 1:		return (lLet.b1 & GetBinary(iY)) ? 1 : 0;;
-		case 2:		return (lLet.b2 & GetBinary(iY)) ? 1 : 0;;
-		case 3:		return (lLet.b3 & GetBinary(iY)) ? 1 : 0;;
-		case 4:		return (lLet.b4 & GetBinary(iY)) ? 1 : 0;;
-		case 5:		return (lLet.b5 & GetBinary(iY)) ? 1 : 0;;
-		case 6:		return (lLet.b6 & GetBinary(iY)) ? 1 : 0;;
-		case 7:		return (lLet.b7 & GetBinary(iY)) ? 1 : 0;;
+		case 0:		return (lLet.b0 & GetBinary(iY)) ? 1 : 0;
+		case 1:		return (lLet.b1 & GetBinary(iY)) ? 1 : 0;
+		case 2:		return (lLet.b2 & GetBinary(iY)) ? 1 : 0;
+		case 3:		return (lLet.b3 & GetBinary(iY)) ? 1 : 0;
+		case 4:		return (lLet.b4 & GetBinary(iY)) ? 1 : 0;
+		case 5:		return (lLet.b5 & GetBinary(iY)) ? 1 : 0;
+		case 6:		return (lLet.b6 & GetBinary(iY)) ? 1 : 0;
+		case 7:		return (lLet.b7 & GetBinary(iY)) ? 1 : 0;
 	}
 }
-//@INFO check to find if we have a pixel, you need to add your own here!
+//@INFO check to find if we have a pixel from a given char, you need to add your own here!
 char GetPixel(char c_Letter,char iX, char iY){
 	switch(c_Letter){
 		case 'A':	return IsPixel(char_A,iX,iY);
@@ -214,5 +215,23 @@ char GetPixel(char c_Letter,char iX, char iY){
 		case '8':	return IsPixel(char_8,iX,iY);
 		case '9':	return IsPixel(char_9,iX,iY);
 		default:	return IsPixel(char_Space,iX,iY);
+	}
+}
+
+char GetPixelMatrix(Matrix8x8 c_Letter,char iX, char iY){
+	return IsPixel(c_Letter,iX,iY);
+}
+
+void WritePixel(Matrix8x8 &lLet,byte iX,byte iY,byte iPixel){
+	byte iYBin = GetBinary(iY);
+	switch(iX){
+		case 0:	if (iPixel == 1) {lLet.b0 += (IsPixel(lLet,iX,iY) == 0) ? iYBin : 0;} else {lLet.b0 -= IsPixel(lLet,iX,iY) ? iYBin : 0;}  return;
+		case 1:	if (iPixel == 1) {lLet.b1 += (IsPixel(lLet,iX,iY) == 0) ? iYBin : 0;} else {lLet.b1 -= IsPixel(lLet,iX,iY) ? iYBin : 0;}  return;
+		case 2:	if (iPixel == 1) {lLet.b2 += (IsPixel(lLet,iX,iY) == 0) ? iYBin : 0;} else {lLet.b2 -= IsPixel(lLet,iX,iY) ? iYBin : 0;}  return;
+		case 3:	if (iPixel == 1) {lLet.b3 += (IsPixel(lLet,iX,iY) == 0) ? iYBin : 0;} else {lLet.b3 -= IsPixel(lLet,iX,iY) ? iYBin : 0;}  return;
+		case 4:	if (iPixel == 1) {lLet.b4 += (IsPixel(lLet,iX,iY) == 0) ? iYBin : 0;} else {lLet.b4 -= IsPixel(lLet,iX,iY) ? iYBin : 0;}  return;
+		case 5:	if (iPixel == 1) {lLet.b5 += (IsPixel(lLet,iX,iY) == 0) ? iYBin : 0;} else {lLet.b5 -= IsPixel(lLet,iX,iY) ? iYBin : 0;}  return;
+		case 6:	if (iPixel == 1) {lLet.b6 += (IsPixel(lLet,iX,iY) == 0) ? iYBin : 0;} else {lLet.b6 -= IsPixel(lLet,iX,iY) ? iYBin : 0;}  return;
+		case 7:	if (iPixel == 1) {lLet.b7 += (IsPixel(lLet,iX,iY) == 0) ? iYBin : 0;} else {lLet.b7 -= IsPixel(lLet,iX,iY) ? iYBin : 0;}  return;
 	}
 }

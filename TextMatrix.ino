@@ -4,8 +4,8 @@ TextMatrix.ino
 Luke Monaghan - 03/01/14
 www.github.com/lukemonaghan
 
-Sketch size = 10340 (with Letters.h)
-Estimated ram use = 1350 (with Letters.h)
+Sketch size = 10624 (with Letters.h)
+Estimated ram use = 1287 (with Letters.h)
 
 8x8 matrix letters binary sample code.
 Display scrolling text using my Letter.h library, code is commented for educational use.
@@ -25,24 +25,15 @@ const char rownum[rowval] = { 30,48,46,24,42,26,34,36 }; //Row Pins
 const char colnum[colval] = { 44,50,40,52,28,38,32,22 }; //Column Pins
 
 
-String text = "Hello World";//string to display
+String text = "Hello World ";//string to display
 char current1,current2;//current letters to show, left and right
 
-int iTime,iTimeMax = 50;//needs to be an int
+int iTime,iTimeMax = 25;//needs to be an int
 char iPosition;
 char Pos;
 
 //Scene to write to. Could be optimized through bitwise
-char Scene[rowval][colval] = {
-	{0,0,0,0,0,0,0,0},
-	{0,0,0,0,0,0,0,0},
-	{0,0,0,0,0,0,0,0},
-	{0,0,0,0,0,0,0,0},
-	{0,0,0,0,0,0,0,0},
-	{0,0,0,0,0,0,0,0},
-	{0,0,0,0,0,0,0,0},
-	{0,0,0,0,0,0,0,0}
-};
+Matrix8x8 Scene;
 
 //Arduino Functions
 void setup() {
@@ -77,7 +68,7 @@ void UpdateMatrix(){
 		//take away one position
 		Pos--;
 		//check if we are outside the colval(max view width)
-		if (Pos < -colval){
+		if (Pos < -colval + 1){
 			//we are, reset to 0
 			Pos = 0;
 			//set our left letter, to the right(as if its scrolling)
@@ -102,9 +93,7 @@ void UpdateMatrix(){
 void ClearScreen(){
 	for(char j = 0; j < sizeof(colnum) / sizeof(char); j++) {
 		for (char k = 0; k < sizeof(rownum) / sizeof(char); k++) {
-			if (Scene[j][k] == 1){
-				Scene[j][k] = 0;
-			}
+			WritePixel(Scene,j,k,0);
 		}
 	}
 }
@@ -127,7 +116,7 @@ void drawLetter(char x,char y,char c){
 				//check if its value isnt 0
 				 if (iLetter != 0){
 				 	//yay we found a pixel, draw it
-					Scene[j][k] = iLetter;
+					WritePixel(Scene,j,k,iLetter);
 				}
 			}
 			//move one
@@ -184,7 +173,7 @@ void DrawScreen() {
 		digitalWrite(row(j), LOW);
 		for (char k = 0; k < sizeof(colnum) / sizeof(char); k++) {
 			// draw some letter bits
-			if(Scene[j][k] == 1) {
+			if(GetPixelMatrix(Scene,j,k) == 1) {
 				digitalWrite(col(k), HIGH);
 			}
 			digitalWrite(col(k), LOW);
