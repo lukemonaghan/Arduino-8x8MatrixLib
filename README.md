@@ -6,7 +6,7 @@ Luke Monaghan
 
 03/01/14
 
-Arduino Scrolling 8x8 LED matrix example with library
+Arduino Scrolling 8x8 LED library with example
 
 ============
 letters.h
