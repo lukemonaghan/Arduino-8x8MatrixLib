@@ -21,7 +21,7 @@ Currently it supports A-Z,a-z and 0-9.
 
 To search through the file search for @INFO tags, doing so will jump complete segments. saves scrolling.
 
-Fell free to use for educational use, any other forms of use must ask for permission first.
+Fell free to use.
 
 I am not responsible for any damage to any of your parts, code, wires, or animals.
 
@@ -35,7 +35,7 @@ Estimated ram use = 1287 (with Letters.h)
 8x8 matrix letters binary sample code.
 Display scrolling text using my Letter.h library, code is commented for educational use.
 
-Fell free to use for educational use, any other forms of use must ask for permission first.
+Fell free to use.
 
 I am not responsible for any damage to any of your parts, code, wires, or animals.
 
